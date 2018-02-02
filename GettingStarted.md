@@ -12,7 +12,7 @@ This project makes use of two main tools:
    * We recommend you use a professional string for your user name that your colleagues will be able to use to easily idenfity you.
 
 1. __Install__:
-   1. [QGIS](http://qgis.org) 
+   1. [QGIS](http://qgis.org) (Version 2.18)
    1. [GitHub Desktop](https://desktop.github.com/)
 
 1. __Tutorials__:
@@ -27,7 +27,9 @@ This project makes use of two main tools:
 
 1. __More Learning__:
    1. GeoJSON Files: http://geojson.org/
-   1. **Add other links that might help them understand what they are doing**
+   1. See the beginning of the files you will be geocoding, e.g.: https://github.com/BenMDawson/SCE_circuit_mapping/blob/master/2016_Data/Adelanto.pdf
+   1. US Department of Energy: https://energy.gov/eere/solar/grid-performance-and-reliability
+   	1. This describes grid reliability from a solar perspective, but imagine for electric vehicles a change in demand.
    
 ## Getting Help
 Don't hesitate to ask questions as you're getting started or at any point in the process.
