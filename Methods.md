@@ -2,6 +2,9 @@
 
 ## Getting Started:
 ### Start with the Issues Tracker
+
+__This will be included once we are on the DEEP Github page__
+
 1. In the Issues section of the SCE_circuit_mapping GitHub page, you should find an Issue for each map.  All maps in need of digitizing have an issue open on the github repository.  The issues are closed for maps as they are finished.  Maps are given labels to indicate their status.  Open issues labeled as "In Progress" are currently being digitized by a contributor.  Choose an map that does not have an "In Progress" label.  
 2. Write a comment for your chosen map that you are working on the boundary.  If possible, assign the task to yourself (on the top of the right side panel of options) and add the "In Progress" label.  Add additional comments if any issues or questions arise about this particular map.
 
