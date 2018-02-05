@@ -20,7 +20,11 @@ This project makes use of two main tools:
       1. Section 2: The Interface
       1. Section 3 (just the basics, not the SVG fill section): Creating a Basic Map
       1. Section 6 (through 6.2.2): Creating Vector Data
-      1. Georeferencing: http://www.qgistutorials.com/en/docs/georeferencing_basics.html
+      1. Georeferencing: 
+      		* For a general introduction that we used in the first day of training. We will use slightly different methods described in the [methods section](https://github.com/BenMDawson/SCE_circuit_mapping/blob/master/Methods.md).
+				* http://www.qgistutorials.com/en/docs/georeferencing_basics.html
+			* This tutorial is very similar to what we will be doing. The primary difference will be he tutorial loads the Open Street Map data from the Quick Map Services plugin instead of Google Roads.
+				* http://www.patrickrickles.com/tutorial/?p=409&page=9
    1. GitHub (in general): https://guides.github.com/ 
       1. Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
 	  1. Forking Projects: https://guides.github.com/activities/forking/
