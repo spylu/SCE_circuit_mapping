@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "template",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3785" } },
+"features": [
+{ "type": "Feature", "properties": { "pdf_name": "Template", "circuit_name": null, "confidence": null, "percent_area": null, "overlap_name": null, "edge": null, "connector": null, "delineator_name": null, "date": "2018-02-05", "notes": "Delete this polygon after you digitize the circuits on your map." }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -13223187.078898878768086, 4016128.354735931847245 ], [ -13224666.225676158443093, 3992462.006299475207925 ], [ -13198781.157073782756925, 3992462.006299475207925 ], [ -13199520.730462422594428, 4016128.354735931847245 ], [ -13223187.078898878768086, 4016128.354735931847245 ] ] ] } }
+]
+}
