@@ -20,6 +20,7 @@ This project makes use of two main tools:
       1. Section 2: The Interface
       1. Section 3 (just the basics, not the SVG fill section): Creating a Basic Map
       1. Section 6 (through 6.2.2): Creating Vector Data
+      1. Georeferencing: http://www.qgistutorials.com/en/docs/georeferencing_basics.html
    1. GitHub (in general): https://guides.github.com/ 
       1. Understanding the GitHub Flow: https://guides.github.com/introduction/flow/
 	  1. Forking Projects: https://guides.github.com/activities/forking/
