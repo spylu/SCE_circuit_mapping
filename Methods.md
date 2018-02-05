@@ -9,9 +9,9 @@
 ## Get the most recent project files from GitHub 
 We’ll describe how to do this with the GitHub for Desktop tool, but you may use the tool of your choice.  We’ll also assume you’ve already set up your GitHub account and the GitHub for Desktop program.:
 1.	Fork the SCE_circuit_mapping repository: https://github.com/BenMDawson/SCE_circuit_mapping .  Details about how to fork a repository and work with it in GitHub Desktop are here: https://guides.github.com/activities/forking/ 
-2.	Open GitHub for Desktop
-3.	Select the forked SCE_circuit_mapping repository on the left sides of the window.
-4.	In your computer’s file navigation system, navigate to your GitHub folder **Description of where to find the data they need to get started**
+1.	Open GitHub for Desktop
+1.	Select the forked SCE_circuit_mapping repository on the left sides of the window.
+1.	In your computer’s file navigation system, navigate to your GitHub folder and open the '2016_Data' folder. Within this folder are all of the pdfs that need to be geocoded. 
 
 Once you've set up your fork, you'll need to update it regularly to make sure you have all the current files.  There is unfortunately no way to do this with the GitHub Desktop tool, but it's not too complicated to update it.
 1. Open GitHub Desktop
@@ -52,15 +52,42 @@ In the event that your fork gets too messy and merging pull requests or updating
 
 ## Digitizing the Circuit Boundaries
 
-** Add step-by-step instructions for how to make a boundary.**
+The general workflow is as follows:
+1.  Open Github and select a file from the list of files in the 'Issues' section of the page. Make sure to comment that you have started working on this pdf.
+1.  Download the pdf you have selected, and isolate the single page labeled 'All Circuits'. The page is typically around page 10.
+1.  (The following steps are described in more detail below)
+1.  Take the map and import it into QGIS.
+1.  'Pin' the map to georeference it in space.
+1.  Draw the polygons for the circuits (aka, feeders).
+1.  Add the attribute data for the polygon.
+1.  Save the map and push it to the Github repository.
 
 ### Get the data/maps into QGIS
+See above to get started. This section will detail the georeferencing portion of the workflow.
+
+*** Fill this out as Michele describes how to do the task.***
 
 ### Make a boundary
+The goal of delineating the circuits is for us to computationally connect a household/business to a specific circuit. To ensure we can do this we need to only allow for overlapping polygons in cases where there are two polygons that have different voltages.
 
 ### Update the attribute table
 
+| Attribute Name | Type | Description | Example |
+| --- | --- | --- | --- |
+| PDF_name | text | Name of pdf | Adelanto |
+| circuit_name | text | Circuit name | Caterpillar |
+| confidence | integer | Confidence of delineation 1(low)-5(high) | | 
+| percent_area | 0-100 | Percent area of circuit covered by another circuit |
+| overlap_name | text | Overlapping circuit's name(s) | |
+| edge | binary | Circuit on edge of map? | |
+| connector | binary | Does a segment connect two polygons? | |
+| name | text | Delineator's name | Ben Dawson |
+| date | date | YYYY-MM-DD | 2018-01-01 |
+| notes | text | Any extra notes | |
+
 ### Save
+
+Once the circuits have been defined as polygons, save the data and push it to the Github repository.
 
 ## Submit your changes to the SCE_circuit_mapping GitHub Repository
 1.	In GitHub for Desktop, you should see a list of changes you’ve made to the files.  Fill in the Summary and Description fields at the bottom of the window and then click the Commit button.  https://guides.github.com/activities/forking/#making-changes 
