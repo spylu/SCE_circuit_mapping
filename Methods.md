@@ -97,9 +97,9 @@ This section will detail the georeferencing portion of the workflow. This is a r
 1.  Find unique points (e.g. road intersections), select from the menu on the window 'Add Point', and then click on the map
 1.  A dialogue box will appear and select 'From map canvas', this will take you back to the Google Maps base layer you originally opened. Select the same point you had just selected from the pdf image.
 1.  Repeat these above two steps for 10-15 points spread out across the map - the further apart the better.
-    *   Ideally once these points have been selected - look through all of the points and hopefully the 'residuals' will be around 1 (but maybe larger) - if they are extreme values 'turn them off'.
     *   *Note: Sometimes there are more or less information given how the data was digitized to ensure copyright, and so if there are differences, just find a point the is unique to both maps.*
-1.  Once you have 10-15 points, in the top menu bar select settings/Transformation Setings...
+1.  Once you have 10-15 points, in the top menu bar select Settings/Transformation Setings...
+    *   Ideally once these points have been selected - look through all of the points and hopefully the 'residuals' will be around 1 (but maybe larger) - if they are extreme values 'turn them off'.
 1.  Select 'Transformation Type': Linear and 'Resampling Method': Nearest Neighbor, and at the bottom select 'Load into QGIS when done'
 1.  In the top left corner of the window select 'Start Georeferencing' and select Coordinate System: EPSG:3857
 1.  On the main QGIS window should now lay your georeferenced map (over top the Google Maps base layer)
