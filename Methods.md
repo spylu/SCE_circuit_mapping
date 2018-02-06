@@ -69,7 +69,7 @@ __The general workflow is as follows__:
 Prior to starting work there need to be a few plugins installed in QGIS. Follow the direction below:
 1.  Open QGIS
 1.  In the menu go to: Plugins/Manage
-1.  Search for and install: Georeference GDAL, and QuickMapServices
+1.  Search for and install: Georeference GDAL, QuickMapServices, and GeoJSONPlugin
 1.  Once that is comple, go to the menu Web/QuickmapServices/Settings
     1.  Choose the 'More Services' tab
     1.  Select 'Get contributed pack'
