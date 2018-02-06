@@ -111,14 +111,14 @@ The goal of delineating the circuits is for us to computationally connect a hous
 
 | Attribute Name | Type | Description | Example |
 | --- | --- | --- | --- |
-| PDF_name | text | Name of pdf | Adelanto |
+| pdf_name | text | Name of pdf | Adelanto |
 | circuit_name | text | Circuit name | Caterpillar |
 | confidence | integer | Confidence of delineation 1(low)-5(high) | | 
 | percent_area | 0-100 | Percent area of circuit covered by another circuit |
 | overlap_name | text | Overlapping circuit's name(s) | |
 | edge | binary | Circuit on edge of map? | |
 | connector | binary | Does a segment connect two polygons? | |
-| name | text | Delineator's name | Ben Dawson |
+| delineator_name | text | Delineator's name | Ben Dawson |
 | date | date | YYYY-MM-DD | 2018-01-01 |
 | notes | text | Any extra notes | |
 
