@@ -107,6 +107,8 @@ This section will detail the georeferencing portion of the workflow. This is a r
 ### Make a boundary
 The goal of delineating the circuits is for us to computationally connect a household/business to a specific circuit. To ensure we can do this we need to only allow for overlapping polygons in cases where there are two polygons that have different voltages.
 
+1.  I am having trouble adding a feature to the 'template.geojson' layer, and so at this point do not worry about this until I have rectified the issue.
+
 ### Update the attribute table
 
 | Attribute Name | Type | Description | Example |
