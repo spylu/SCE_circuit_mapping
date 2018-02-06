@@ -55,8 +55,8 @@ In the event that your fork gets too messy and merging pull requests or updating
 
 ## Digitizing the Circuit Boundaries
 
-The general workflow is as follows:
-1.  Open Github and select a file from the list of files in the 'Issues' section of the page. Make sure to comment that you have started working on this pdf.
+__The general workflow is as follows__:
+1.  Open Github and select a file from the list of files in the 'Issues' section of the page. Make sure to change the label once you have started working on this pdf.
 1.  Download the pdf you have selected, and isolate the single page labeled 'All Circuits'. The page is typically around page 10.
 1.  (The following steps are described in more detail below)
 1.  Take the map and import it into QGIS.
@@ -65,10 +65,44 @@ The general workflow is as follows:
 1.  Add the attribute data for the polygon.
 1.  Save the map and push it to the Github repository.
 
-### Get the data/maps into QGIS
-See above to get started. This section will detail the georeferencing portion of the workflow.
+### For the first time opening QGIS
+Prior to starting work there need to be a few plugins installed in QGIS. Follow the direction below:
+1.  Open QGIS
+1.  In the menu go to: Plugins/Manage
+1.  Search for and install: Georeference GDAL, and QuickMapServices
+1.  Once that is comple, go to the menu Web/QuickmapServices/Settings
+    1.  Choose the 'More Services' tab
+    1.  Select 'Get contributed pack'
+1.  In the menu go to Web/QuickMapServices/Google/Google Road
+    1.  'Ignore' if there is an error
+1.  Now there should be a Google Map in the viewer
+1.  Proceed to 'Get the data/maps into QGIS' below
 
-*** Fill this out as Michele describes how to do the task.***
+### Get the data/maps into QGIS
+*See above to get started if this is the first time you are opening QGIS. *
+
+This section will detail the georeferencing portion of the workflow. This is a rough outline, and for details please refer to the tutorials in "Getting Started", i.e. [GettingStarted/Tutorials/QGIS/Georeferencing](https://github.com/BenMDawson/SCE_circuit_mapping/blob/master/GettingStarted.md)
+
+1.  Open QGIS
+    1.  Install plugins if you have not already - detailed above
+1.  In the menu go to Web/QuickMapServices/Google/Google Road
+    *   'Ignore' if there is an error
+    *   Now there should be a Google Map in the viewer
+1.  Go to the menu, Raster/Georeferencer/Georeferencer...
+1.  In the upper-left corner go to 'Open Raster'
+1.  Select the file to be rasterized
+1.  Select Coordinate System: EPSG:3857
+    *   This is the projection of the basemap that the pdf is 'pinned' onto.
+    *   It can be searched for in the 'filter' field
+1.  Find unique points (e.g. road intersections), select from the menu on the window 'Add Point', and then click on the map
+1.  A dialogue box will appear and select 'From map canvas', this will take you back to the Google Maps base layer you originally opened. Select the same point you had just selected from the pdf image.
+1.  Repeat these above two steps for 10-15 points spread out across the map - the further apart the better.
+    *   Ideally once these points have been selected - look through all of the points and hopefully the 'residuals' will be around 1 (but maybe larger) - if they are extreme values 'turn them off'.
+    *   *Note: Sometimes there are more or less information given how the data was digitized to ensure copyright, and so if there are differences, just find a point the is unique to both maps.*
+1.  Once you have 10-15 points, in the top menu bar select settings/Transformation Setings...
+1.  Select 'Transformation Type': Linear and 'Resampling Method': Nearest Neighbor, and at the bottom select 'Load into QGIS when done'
+1.  In the top left corner of the window select 'Start Georeferencing' and select Coordinate System: EPSG:3857
+1.  On the main QGIS window should now lay your georeferenced map (over top the Google Maps base layer)
 
 ### Make a boundary
 The goal of delineating the circuits is for us to computationally connect a household/business to a specific circuit. To ensure we can do this we need to only allow for overlapping polygons in cases where there are two polygons that have different voltages.
