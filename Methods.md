@@ -102,12 +102,30 @@ This section will detail the georeferencing portion of the workflow. This is a r
     *   Ideally once these points have been selected - look through all of the points and hopefully the 'residuals' will be around 1 (but maybe larger) - if they are extreme values 'turn them off'.
 1.  Select 'Transformation Type': Linear and 'Resampling Method': Nearest Neighbor, and at the bottom select 'Load into QGIS when done'
 1.  In the top left corner of the window select 'Start Georeferencing' and select Coordinate System: EPSG:3857
-1.  On the main QGIS window should now lay your georeferenced map (over top the Google Maps base layer)
+1.  On the main QGIS window should now lay your georeferenced map (over top the Google Maps base layer) for making boundaries
 
 ### Make a boundary
 The goal of delineating the circuits is for us to computationally connect a household/business to a specific circuit. To ensure we can do this we need to only allow for overlapping polygons in cases where there are two polygons that have different voltages.
 
-1.  I am having trouble adding a feature to the 'template.geojson' layer, and so at this point do not worry about this until I have rectified the issue.
+1.  With QGIS open and the georeferenced map, open via Layer/Add Layer/Add Vector Layer (or drag and drop) the 'template.geojson' file.
+1.  Choose a circuit to delineate and select the 'Add Feature' button in the menu
+    *   If this button is shaded out, click the 'Toggle Editing' button to the left of it
+1.  Delineate the circuit - this is the key step of the process. The goal is to be able to match an address to a circuit, and thus to create a boundary between circuits such that from an address we know which house belongs to which circuit is tantamount.
+    *   This requires judgement and pracice
+    *   A good rule of thumb is to select the boundary that is exactly between the two neighboring circuits, but is not always the case
+    *   If you reach a case that is unusual, please refer to the [unusual cases](https://github.com/BenMDawson/SCE_circuit_mapping/blob/master/Unusual_Cases.md) page
+    *   If there is still ambiguity, please always feel free to e-mail me
+1.  To do so, determine the polygon that best represents the circuit following the directions above
+1.  The process started in step two, so at this point you can click around the boundary of the polygon to generate the new field
+1.  If you like the delineation, right click, if you do not, press escape and start over at step 2.
+1.  Repeat the above steps untill all of the circuits have been delineated
+1.  Once all of circuits have been delineated select the 'template' polygon (the large square off of the shore of Long Beach) and delete that feature
+    *   To do so, select the polygon and use the trash button in the menu
+1.  SAVE! You're done.
+1.  We need two files saved:
+    1.  The full working file that you have just generated - this includes all of the layers, the georeferenced image, and all of the polygons just delineated. Save this file to the 'Archives' folder named as '(pdf name) _ archive.geojson' - there should be no spaces
+    1.  The polygon layer to the 'Completed' folder named as '(pdf name).geojson'
+1.  Below (in the 'Save' section) details how to push the newly generated data to the Github page
 
 ### Update the attribute table
 
