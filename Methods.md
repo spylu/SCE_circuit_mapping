@@ -124,7 +124,9 @@ The goal of delineating the circuits is for us to computationally connect a hous
 1.  SAVE! You're done.
 1.  We need two files saved:
     1.  The full working file that you have just generated - this includes all of the layers, the georeferenced image, and all of the polygons just delineated. Save this file to the 'Archives' folder named as '(pdf name) _ archive.geojson' - there should be no spaces
+        *   To save this, in the menu go to Projects/Save As
     1.  The polygon layer to the 'Completed' folder named as '(pdf name).geojson'
+        *   To save this, right click on the template file and then Save As - be sure to rename the file for the appropriate pdf the file originated from
 1.  Below (in the 'Save' section) details how to push the newly generated data to the Github page
 
 ### Update the attribute table
